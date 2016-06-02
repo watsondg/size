@@ -1,0 +1,39 @@
+{
+  "name": "size",
+  "version": "1.0.0",
+  "description": "Small util to centralize and debounce window 'resize' events.",
+  "main": "index.js",
+  "scripts": {
+    "test": "browserify test/index.js | tap-closer | smokestack | faucet",
+    "test-debug": "budo test/index.js --live"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/watsondg/size.git"
+  },
+  "keywords": [
+    "size",
+    "window",
+    "resize",
+    "innerwidth",
+    "innerheight",
+    "viewport",
+    "screen"
+  ],
+  "author": "Florian Morel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/watsondg/size/issues"
+  },
+  "homepage": "https://github.com/watsondg/size#readme",
+  "devDependencies": {
+    "faucet": "0.0.1",
+    "smokestack": "^3.4.1",
+    "tap-closer": "^1.0.0",
+    "tape": "^4.5.1"
+  },
+  "dependencies": {
+    "debounce": "^1.0.0",
+    "tiny-emitter": "^1.0.2"
+  }
+}
