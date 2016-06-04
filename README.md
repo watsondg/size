@@ -3,6 +3,11 @@ size.js
 
 Small util to centralize and debounce window 'resize' events.
 
+- Avoid accessing a global object (window)
+- Avoid triggering [unnecessary repaint/reflow](https://gist.github.com/paulirish/5d52fb081b3570c81e3a)
+- Avoid locking the UI by only dispatching one event
+
+
 ## Install
 
 ```
