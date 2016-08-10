@@ -19,9 +19,10 @@ npm install watsondg/size -S
 ```
 var size = require('size');
 
-size.addListener(function() {
-    console.log('resized', size.width, size.height);
+size.addListener(function(width, height) {
+    console.log('resized', width, height);
 });
+console.log(size.width);
 ```
 
 ## Instance Methods

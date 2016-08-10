@@ -47,7 +47,7 @@ function onEvent() {
     }
 
     size.isLandscape = size.width > size.height;
-    emitter.emit(EVENT_NAME);
+    emitter.emit(EVENT_NAME, size.width, size.height);
 }
 
 onEvent();

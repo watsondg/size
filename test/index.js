@@ -46,6 +46,17 @@ test('instance properties test', function(assert) {
     triggerResize();
 });
 
+test('width/height test', function(assert) {
+    var resizeHandler = function(width, height) {
+        assert.ok(width == window.innerWidth, 'Passed width should be same as window width');
+        size.removeListener(resizeHandler);
+        assert.end();
+    };
+    size.addListener(resizeHandler);
+
+    triggerResize();
+});
+
 function triggerResize() {
     window.dispatchEvent(new Event('resize'));
 }
