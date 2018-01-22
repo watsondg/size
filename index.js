@@ -38,13 +38,11 @@ var size = module.exports = {
 
 function onEvent() {
     if (isiOS) {
-        size.width = document.body.clientWidth;
-        size.height = document.body.clientHeight;
         size.hasBar = size.width > size.height && size.height > window.innerHeight;
-    } else {
-        size.width = window.innerWidth;
-        size.height = window.innerHeight;
     }
+
+    size.width = window.innerWidth;
+    size.height = window.innerHeight;
 
     size.isLandscape = size.width > size.height;
     emitter.emit(EVENT_NAME, size.width, size.height);
